@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DPS926_A1.ManagePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <NavigationPage.TitleView>
+        <Label
+            FontSize="22"
+            Text="Manage"
+            TextColor="GhostWhite" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout Padding="120">
+            <Button
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="historyBtn_Clicked"
+                CornerRadius="10"
+                FontSize="22"
+                Text="History"
+                TextColor="WhiteSmoke" />
+            <Button
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="restockBtn_Clicked"
+                CornerRadius="10"
+                FontSize="22"
+                Text="Restock"
+                TextColor="WhiteSmoke" />
+            <Button
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="addBtn_Clicked"
+                CornerRadius="10"
+                FontSize="22"
+                Text="Add Item"
+                TextColor="WhiteSmoke" />
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

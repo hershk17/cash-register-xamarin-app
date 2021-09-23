@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DPS926_A1.ItemPurchasedDetails"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <NavigationPage.TitleView>
+        <Label
+            FontSize="22"
+            Text="Purchase Details"
+            TextColor="GhostWhite" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Label
+                x:Name="itemName"
+                FontSize="16"
+                TextColor="White" />
+            <Label
+                x:Name="itemQty"
+                FontSize="16"
+                TextColor="White" />
+            <Label
+                x:Name="itemDate"
+                FontSize="16"
+                TextColor="White" />
+            <Label
+                x:Name="itemPrice"
+                FontSize="16"
+                TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

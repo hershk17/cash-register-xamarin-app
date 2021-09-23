@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DPS926_A1.RestockPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <NavigationPage.TitleView>
+        <Label
+            FontSize="22"
+            Text="Restock"
+            TextColor="GhostWhite" />
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="stockList" BackgroundColor="#212121">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label
+                                    Grid.Column="0"
+                                    FontSize="14"
+                                    HorizontalTextAlignment="Start"
+                                    Text="{Binding name}"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                                <Label
+                                    Grid.Column="1"
+                                    FontSize="14"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding qty}"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Entry
+                    x:Name="restockEntry"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    ClearButtonVisibility="WhileEditing"
+                    Focused="restockEntry_Focused"
+                    Keyboard="Numeric"
+                    Placeholder="Enter a quantity"
+                    Unfocused="restockEntry_Focused" />
+
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    BackgroundColor="#212121"
+                    BorderColor="DimGray"
+                    BorderWidth="1"
+                    Clicked="restockBtn_clicked"
+                    CornerRadius="10"
+                    FontSize="16"
+                    Text="Restock"
+                    TextColor="WhiteSmoke" />
+            </Grid>
+
+            <Grid x:Name="cancelGrid" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button
+                    BackgroundColor="#212121"
+                    BorderColor="DimGray"
+                    BorderWidth="1"
+                    Clicked="cancelBtn_clicked"
+                    CornerRadius="10"
+                    FontSize="16"
+                    Text="Cancel"
+                    TextColor="WhiteSmoke" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

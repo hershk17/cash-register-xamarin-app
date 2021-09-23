@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DPS926_A1.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <NavigationPage.TitleView>
+        <Label
+            FontSize="22"
+            Text="Cash Register App"
+            TextColor="GhostWhite" />
+    </NavigationPage.TitleView>
+
+    <StackLayout BackgroundColor="#121212">
+        <StackLayout Padding="25,10,40,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Grid.Column="0"
+                    Padding="5,0,0,0"
+                    FontSize="22"
+                    Text="Name"
+                    TextColor="WhiteSmoke"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Column="1"
+                    FontSize="22"
+                    HorizontalTextAlignment="Center"
+                    Text="Qty"
+                    TextColor="WhiteSmoke"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Column="2"
+                    Padding="0,0,5,0"
+                    FontSize="22"
+                    HorizontalTextAlignment="End"
+                    Text="Price"
+                    TextColor="WhiteSmoke"
+                    VerticalOptions="Center" />
+            </Grid>
+
+            <ListView
+                x:Name="ListView"
+                BackgroundColor="#212121"
+                ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label
+                                    Grid.Column="0"
+                                    Padding="10,0,0,0"
+                                    FontSize="16"
+                                    Text="{Binding name}"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                                <Label
+                                    Grid.Column="1"
+                                    FontSize="16"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Binding qty}"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                                <Label
+                                    Grid.Column="2"
+                                    Padding="0,0,10,0"
+                                    FontSize="16"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding price}"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+
+        <Grid Padding="25,20,45,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                x:Name="labelType"
+                Grid.Column="0"
+                FontSize="22"
+                TextColor="WhiteSmoke" />
+            <Label
+                x:Name="labelQuantity"
+                Grid.Column="1"
+                FontSize="22"
+                HorizontalTextAlignment="Center"
+                TextColor="WhiteSmoke" />
+            <Label
+                x:Name="labelTotal"
+                Grid.Column="2"
+                FontSize="22"
+                HorizontalTextAlignment="End"
+                TextColor="WhiteSmoke" />
+        </Grid>
+
+        <Grid
+            x:Name="myGrid"
+            Padding="25,10,40,10"
+            ColumnSpacing="5"
+            HeightRequest="400"
+            RowSpacing="5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="75" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="1.2*" />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="1"
+                TextColor="WhiteSmoke" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="2"
+                TextColor="WhiteSmoke" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="3"
+                TextColor="WhiteSmoke" />
+
+            <Button
+                Grid.Row="0"
+                Grid.Column="4"
+                Grid.ColumnSpan="1"
+                BackgroundColor="SlateBlue"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="ManageButton_Clicked"
+                CornerRadius="15"
+                FontSize="16"
+                Text="Manage"
+                TextColor="WhiteSmoke" />
+
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="4"
+                TextColor="WhiteSmoke" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="5"
+                TextColor="WhiteSmoke" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="6"
+                TextColor="WhiteSmoke" />
+
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="7"
+                TextColor="WhiteSmoke" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="8"
+                TextColor="WhiteSmoke" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="2"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="9"
+                TextColor="WhiteSmoke" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                BackgroundColor="#212121"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="Button_Clicked"
+                CornerRadius="25"
+                FontSize="22"
+                Text="0"
+                TextColor="WhiteSmoke" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                BackgroundColor="#121212"
+                Clicked="Backspace_Clicked"
+                CornerRadius="50"
+                FontSize="26"
+                Text="⌫"
+                TextColor="LightGray" />
+
+            <Button
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.Column="4"
+                BackgroundColor="MediumSeaGreen"
+                BorderColor="DimGray"
+                BorderWidth="1"
+                Clicked="BuyButton_Clicked"
+                CornerRadius="15"
+                FontSize="24"
+                Text="Buy"
+                TextColor="WhiteSmoke" />
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
