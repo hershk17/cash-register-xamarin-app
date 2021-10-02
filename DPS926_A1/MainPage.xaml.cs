@@ -119,7 +119,7 @@ namespace DPS926_A1
                     ItemPurchased itemPurchased = new ItemPurchased(selected_item.name, Int32.Parse(selected_quantity), selected_cost, DateTime.Now.ToString("G", CultureInfo.CreateSpecificCulture("en-US")));
                     purchased_items.Add(itemPurchased);
 
-                    DisplayAlert("Success", "You purchased " + itemPurchased.name, "OK");
+                    DisplayAlert("Success", "You purchased " + itemPurchased.qty + " "+ itemPurchased.name + " for " + itemPurchased.price, "OK");
 
                     list[idx].qty -= qty;
                     labelTotal.Text = list[idx].qty.ToString();

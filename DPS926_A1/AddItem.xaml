@@ -20,7 +20,7 @@
 
             <Button
                 Grid.Column="1"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="saveBtn_Clicked"
@@ -31,7 +31,7 @@
 
             <Button
                 Grid.Column="2"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="cancelBtn_Clicked"
@@ -43,24 +43,54 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout>
-            <TableView>
+        <StackLayout Padding="20,10,20,0" BackgroundColor="#191919">
+            <TableView BackgroundColor="#191919">
                 <TableRoot>
-                    <TableSection Title="NEW ITEM">
-                        <EntryCell
-                            x:Name="itemName"
-                            Label="Item Name"
-                            Placeholder="Enter Item Name Here" />
-                        <EntryCell
-                            x:Name="itemPrice"
-                            Keyboard="Numeric"
-                            Label="Price"
-                            Placeholder="Enter Item Price Here" />
-                        <EntryCell
-                            x:Name="itemQty"
-                            Keyboard="Numeric"
-                            Label="Quantity"
-                            Placeholder="Enter Item Quantity Here" />
+                    <TableSection>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label
+                                    FontSize="16"
+                                    Text="Name"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="100" />
+                                <Entry
+                                    FontSize="16"
+                                    x:Name="itemName"
+                                    Placeholder="Enter Item Name Here"
+                                    WidthRequest="300" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label
+                                    FontSize="16"
+                                    Text="Price"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="100" />
+                                <Entry
+                                    x:Name="itemPrice"
+                                    FontSize="16"
+                                    Keyboard="Numeric"
+                                    Placeholder="Enter Item Price Here"
+                                    WidthRequest="300" />
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label
+                                    FontSize="16"
+                                    Text="Quantity"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="100" />
+                                <Entry
+                                    x:Name="itemQty"
+                                    FontSize="16"
+                                    Keyboard="Numeric"
+                                    Placeholder="Enter Item Quantity Here"
+                                    WidthRequest="300" />
+                            </StackLayout>
+                        </ViewCell>
                     </TableSection>
                 </TableRoot>
             </TableView>

@@ -19,21 +19,21 @@ namespace DPS926_A1
 
         private void saveBtn_Clicked(object sender, EventArgs e)
         {
-            if(itemName.Text == "")
+            if (string.IsNullOrEmpty(itemName.Text))
             {
                 DisplayAlert("Error", "Please enter the item name.", "OK");
             } 
-            else if (itemPrice.Text == "")
+            else if (string.IsNullOrEmpty(itemPrice.Text))
             {
                 DisplayAlert("Error", "Please enter the item price.", "OK");
             } 
-            else if(itemQty.Text == "")
+            else if(string.IsNullOrEmpty(itemQty.Text))
             {
                 DisplayAlert("Error", "Please enter the item quantity.", "OK");
             }
             else
             {
-                MainPage.list.Add(new Item(itemName.Text, Int32.Parse(itemPrice.Text), Int32.Parse(itemQty.Text)));
+                MainPage.list.Add(new Item(itemName.Text, Int32.Parse(itemQty.Text), Int32.Parse(itemPrice.Text)));
                 DisplayAlert("Success", "New Item added successfully.", "OK");
                 Navigation.PopAsync();
             }

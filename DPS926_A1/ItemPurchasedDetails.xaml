@@ -12,7 +12,7 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout Padding="30">
+        <StackLayout Padding="30" BackgroundColor="#191919">
             <Label
                 x:Name="itemName"
                 FontSize="16"

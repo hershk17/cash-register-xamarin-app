@@ -12,9 +12,9 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout Padding="120">
+        <StackLayout Padding="120" BackgroundColor="#191919">
             <Button
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="historyBtn_Clicked"
@@ -23,7 +23,7 @@
                 Text="History"
                 TextColor="WhiteSmoke" />
             <Button
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="restockBtn_Clicked"
@@ -32,7 +32,7 @@
                 Text="Restock"
                 TextColor="WhiteSmoke" />
             <Button
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="addBtn_Clicked"

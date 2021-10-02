@@ -6,14 +6,16 @@
 
     <NavigationPage.TitleView>
         <Label
+            Padding="12,0,0,0"
             FontSize="22"
             Text="Cash Register App"
-            TextColor="GhostWhite" />
+            TextColor="GhostWhite"
+            VerticalOptions="Start" />
     </NavigationPage.TitleView>
 
-    <StackLayout BackgroundColor="#121212">
-        <StackLayout Padding="25,10,40,0">
-            <Grid>
+    <StackLayout BackgroundColor="#191919">
+        <StackLayout>
+            <Grid Padding="30,20,30,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40" />
                 </Grid.RowDefinitions>
@@ -25,7 +27,6 @@
 
                 <Label
                     Grid.Column="0"
-                    Padding="5,0,0,0"
                     FontSize="22"
                     Text="Name"
                     TextColor="WhiteSmoke"
@@ -39,7 +40,6 @@
                     VerticalOptions="Center" />
                 <Label
                     Grid.Column="2"
-                    Padding="0,0,5,0"
                     FontSize="22"
                     HorizontalTextAlignment="End"
                     Text="Price"
@@ -49,7 +49,7 @@
 
             <ListView
                 x:Name="ListView"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -57,7 +57,7 @@
                             <Grid>
                                 <Label
                                     Grid.Column="0"
-                                    Padding="10,0,0,0"
+                                    Padding="30,0,0,0"
                                     FontSize="16"
                                     Text="{Binding name}"
                                     TextColor="White"
@@ -71,7 +71,7 @@
                                     VerticalTextAlignment="Center" />
                                 <Label
                                     Grid.Column="2"
-                                    Padding="0,0,10,0"
+                                    Padding="0,0,30,0"
                                     FontSize="16"
                                     HorizontalTextAlignment="End"
                                     Text="{Binding price}"
@@ -85,7 +85,7 @@
 
         </StackLayout>
 
-        <Grid Padding="25,20,45,0">
+        <Grid Padding="30,25,30,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="35" />
             </Grid.RowDefinitions>
@@ -116,7 +116,7 @@
 
         <Grid
             x:Name="myGrid"
-            Padding="25,10,40,10"
+            Padding="30,10,30,0"
             ColumnSpacing="5"
             HeightRequest="400"
             RowSpacing="5">
@@ -138,7 +138,7 @@
             <Button
                 Grid.Row="0"
                 Grid.Column="0"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -149,7 +149,7 @@
             <Button
                 Grid.Row="0"
                 Grid.Column="1"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -160,7 +160,7 @@
             <Button
                 Grid.Row="0"
                 Grid.Column="2"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -185,7 +185,7 @@
             <Button
                 Grid.Row="1"
                 Grid.Column="0"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -196,7 +196,7 @@
             <Button
                 Grid.Row="1"
                 Grid.Column="1"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -207,7 +207,7 @@
             <Button
                 Grid.Row="1"
                 Grid.Column="2"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -219,7 +219,7 @@
             <Button
                 Grid.Row="2"
                 Grid.Column="0"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -230,7 +230,7 @@
             <Button
                 Grid.Row="2"
                 Grid.Column="1"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -241,7 +241,7 @@
             <Button
                 Grid.Row="2"
                 Grid.Column="2"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -252,7 +252,7 @@
             <Button
                 Grid.Row="3"
                 Grid.Column="1"
-                BackgroundColor="#212121"
+                BackgroundColor="#151515"
                 BorderColor="DimGray"
                 BorderWidth="1"
                 Clicked="Button_Clicked"
@@ -263,12 +263,15 @@
             <Button
                 Grid.Row="3"
                 Grid.Column="2"
-                BackgroundColor="#121212"
+                BackgroundColor="#151515"
+                BorderColor="DimGray"
+                BorderWidth="1"
                 Clicked="Backspace_Clicked"
                 CornerRadius="50"
                 FontSize="26"
+                Scale=".85"
                 Text="⌫"
-                TextColor="LightGray" />
+                TextColor="WhiteSmoke" />
 
             <Button
                 Grid.Row="1"

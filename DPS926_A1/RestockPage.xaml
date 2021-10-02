@@ -12,8 +12,8 @@
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="stockList" BackgroundColor="#212121">
+        <StackLayout Padding="20,0,20,0" BackgroundColor="#191919">
+            <ListView x:Name="stockList" BackgroundColor="#191919">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -40,7 +40,7 @@
 
             <Grid ColumnSpacing="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="55" />
+                    <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -72,9 +72,12 @@
                     TextColor="WhiteSmoke" />
             </Grid>
 
-            <Grid x:Name="cancelGrid" ColumnSpacing="10">
+            <Grid
+                x:Name="cancelGrid"
+                Padding="0,0,0,10"
+                ColumnSpacing="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="55" />
+                    <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
